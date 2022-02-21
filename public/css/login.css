@@ -1,0 +1,95 @@
+*{
+    margin: 0px;
+    padding: 0px;
+    font-family: 'Roboto', sans-serif;
+}
+
+/*MAIN*/
+.log-main{
+    background-color:white;
+    padding-bottom: 30px;
+}
+.log-contenedor{
+    background-color:#262120;
+    width: 80%;
+    margin: auto;
+    /* border-radius: 8px; */
+    margin-top: 40px;
+    padding: 20px;
+    box-shadow: #686868 5px 5px 5px;
+}
+.log-titulo-principal{
+    text-align: center;
+    padding: 15px;
+    color:white;
+    font-family: Roboto;
+}
+.log-control{
+    font-family: Gemunu Libre;
+    padding-left: 10px;
+    width: 55%;
+    height: 30px;
+    font-size: 18px;
+    border-radius: 5px;
+}
+.log-control-formulario{
+    text-align: center;
+    padding: 15px;
+}
+.log-div-boton{
+    text-align: center; 
+}
+.log-boton-formulario{
+    background-color:#8C1B1B;
+    color: white;
+    font-size: 18px;
+    padding: 8px;
+    border-radius: 8px;
+    margin: 10px;
+    width: 50%;
+    text-align: center;
+}
+.text-danger{
+    color:#8C1B1B;
+}
+
+.log-p{
+    text-align: center;
+    color:white
+}
+.log-text-regist{
+    padding-top: 30px;
+    text-align: center;
+    color: white;
+}
+.log-label {
+    color:white;
+}
+.log-checkbox{
+    text-align: center;
+}
+.log-div-boton a{
+    text-decoration: none;
+    color:white;    
+}
+.log-errores{
+    color: white;
+}
+
+
+/*MEDIA QUERIES*/
+/*TABLET*/
+@media(min-width:481px){
+    .log-boton-formulario{
+        width: 20%;
+    }
+}
+/*PC*/
+@media(min-width:769px){
+    .log-control{
+        width: 30%;
+    }
+    .log-contenedor{
+        width:60%;
+    }
+}

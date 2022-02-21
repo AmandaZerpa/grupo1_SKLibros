@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <%- include("./partials/head", {title : "Mi perfil"}) %>
+</head>
+<body>
+    <%- include("./partials/header") %>
+    <main class="pf-main">
+        <div class="pf-main-segundo-div">
+            <div>
+                <h1 class="pf-h1">Bienvenido <%= user.nombre %> </h1>
+                <div class="pf-info">
+                    <h3 class="pf-h3">Tus Datos</h3>
+                    <div class="pf-div-foto-user">
+                        <p class="pf-texto-foto"><b>Foto de Perfil:</b></p>
+                        <img src="/img/users/<%= user.imagen  %>" alt="" class="pf-foto-user">
+                    </div>
+                    <ul class="pf-ul">
+                        <li class="pf-li"><b>Nombre y Apellido:</b> <%= user.nombre + ' ' + user.apellido  %></li>
+                        <li class="pf-li"><b>Email:</b> <%= user.email  %></li>
+                    </ul>
+                </div>
+            </div>
+            <div class="pf-div-img">
+                <img src="/img/it-2-pennywise-muneco-hot-toys-5-1568370501.jpg" alt="" class="pf-pennywise">
+            </div>
+        </div>
+    </main>
+    <%- include("./partials/footer") %>
+
+</body>
+</html>

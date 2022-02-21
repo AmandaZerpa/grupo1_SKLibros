@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <%- include("./partials/head", {title : "Registrarse"}) %>
+</head>
+<body>
+    <%- include("./partials/header") %>
+    <main>
+        <div class="reg-main-div">
+            <div class="reg-div-nuestra-web">
+                <h2>Regístrate</h2>
+                <form action="/users/register" method='POST' id="reg-form" class="reg-form" enctype="multipart/form-data">
+                    <input type="text" placeholder="Nombre" class="reg-inputs" name="nombre" id="reg-nombre"
+                    value="<%=locals.oldData ? oldData.nombre : null %>">
+                    <div class="errorNombre"></div>
+                    <% if(locals.errors && errors.nombre){%>
+                        <div>
+                        <%= errors.nombre.msg%> 
+                        </div>  
+                    <% } %> 
+                    
+                    <input type="text" placeholder="Apellido" class="reg-inputs" id="reg-apellido" name="apellido" 
+                    value="<%=locals.oldData ? oldData.apellido: null %>">
+                    <div class="errorApellido"></div>
+                    <% if(locals.errors && errors.apellido){%>
+                        <div>
+                        <%= errors.apellido.msg%> 
+                        </div>  
+                    <% } %> 
+                        
+                    <input type="text" placeholder="E-mail" class="reg-inputs" id="reg-email" name="email" 
+                    value="<%=locals.oldData ? oldData.email : null %>">
+                    <div class="errorEmail"></div>
+                    <% if(locals.errors && errors.email){%>
+                        <div>
+                        <%= errors.email.msg%> 
+                        </div>  
+                    <% } %> 
+
+                    <input type="password" placeholder="Contraseña" class="reg-inputs" id="reg-password" name="contrasenia" >
+                    <div class="errorPassword"></div>
+                    <% if(locals.errors && errors.contrasenia){%>
+                        <div>
+                        <%= errors.contrasenia.msg%> 
+                        </div>  
+                    <% } %> 
+
+                     <div>
+                        <label for="image">Selecciona una imagen</label>
+                        <input  type="file" name="image" id="image" class="reg-image"
+                        value="<%=locals.oldData ? oldData.image : null %>">
+                        <div class="errorImage"></div>
+                        <% if(locals.errors && errors.image){%>
+                            <div>
+                            <%= errors.image.msg%> 
+                            </div>  
+                        <% } %> 
+                        <select class="reg-categoria" name="categoria">
+                            <option value="0">Categoría de usuario...</option>
+                            <option value="1">Comprador</option>
+                            <option value="3">Vendedor</option>
+                        </select>
+                        <div class="errorCategoria"></div>
+                    </div>
+                    <button type='submit' class="reg-botones-nuestra-web"> Registrarme 
+                    </button>
+                </form>
+            </div>
+            <div class="reg-con">
+                <h2>Regístrate con:</h2>
+                <button class="reg-con-boton reg-con-boton-google"><img src="/img/google-icono.png" alt="" class="reg-google"> Google</button>
+                <button class="reg-con-boton reg-twitter"><i class="fab fa-twitter"></i> Twitter</button>
+                <button class="reg-con-boton reg-fa-facebook-f"><i class="fab fa-facebook-f"></i> Facebook</button>
+                <button class="reg-con-boton reg-linkedIn"><i class="fab fa-linkedin-in"></i> LinkedIn</button>
+            </div>
+        </div>
+        <div class="reg-tienes-cuenta">
+            <p class="reg-text">¿Ya tienes una cuenta?</p>
+                <button type="submit"  class="reg-boton-ingresar">
+                    <a href="/users/login">Ingresar</a>
+                </button>
+        </div>
+    </main>
+    <%- include("./partials/footer") %>
+    <script src="/js/usersRegisterForm.js"></script>
+</body>
+</html>

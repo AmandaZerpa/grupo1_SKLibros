@@ -1,0 +1,293 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <%- include("./partials/head", {title : product.name}) %>
+</head>
+
+<body class="detail-body">
+    <%- include("./partials/header") %>
+    <main>
+        <article >
+        <article class="detail-artEnvio">
+            <div class="detail-enviogratis">
+                <i class="fas fa-rocket"></i>
+                <h3 class="detail-h3">ENVÍO GRATIS</h3>
+            </div>
+        </article>
+        </article>
+      
+        <article class="detail-mainarticle">
+        <article class="detail-noSeVeEnTablet">
+
+            <div class="detail-detalles">
+                <h2 class="detail-h2" class="detail-tituloLibro titulo" ><%=product.nombre%></h2>
+                <div class="detail-costadoDerecho"><img class="detail-estrellas" src="/img/cuatro-estrellas.png">
+                    <p class="detail-p">Formato papel, Español / Stephen King</p>
+                </div>
+                <div class="detail-fotolibro"><img src="/img/products/<%=product.imagen%>"></div>
+                <div class="detail-costadoDerecho">
+                    <div class="detail-precio" >
+                        <h2>ARS$ <%= toThousand(product.precio) %></h2>
+                    </div>
+                    <!-- BOTON CELU -->
+                    <div class="detail-boton" id="btn-agregar-celu">
+                        <p>Añadir al carrito</p>
+                    </div>
+                    <% if (user && user.categorias_id === 3) { %>
+                    <form action="/products/delete/<%= product.id %>?_method=DELETE" method="POST">
+                        <button type="submit" class="detail-boton" id="deleteProduct-celu">
+                            <h5>Eliminar producto</h5>
+                        </button>
+                    </form>
+                    <form action="/products/edit/<%= product.id %>" method="GET">
+                        <button  type="submit" class="detail-boton"><p>Editar producto</p></a></button>
+                    </form>
+                    <% } %>
+                </div>
+                <div class="detail-compartir">
+                    <h4>Compartir</h4>
+                    <div><i class="far fa-envelope"></i></div>
+                    <div><i class="fab fa-facebook-f"></i></div>
+                    <div><i class="fab fa-twitter"></i></div>
+                    <div><i class="fab fa-pinterest-p"></i></div>
+                </div>
+                <div class="detail-articulodisponible">
+                    <div class="detail-envio">
+                        <div class="detail-cohete"><i class="fas fa-rocket"></i></div>
+                        <h4 class="detail-texto">Envío gratis</h4>
+                    </div>
+                    <div class="detail-disponible">
+                        <i class="far fa-clock"></i>
+                        <p class="detail-p">Disponible. Entrega estimada a Argentina entre 17-32 días hábiles.</p>
+                    </div>
+                </div>
+            </div>
+        </article>
+</article>
+    <article class="detail-mainarticle">
+        <article class="detail-artTitulo">
+            <div class="detail-tituloTablet">
+                <h2 class="detail-miniborde titulo" ><%= product.nombre %></h2>
+            </div>
+        </article>
+</article>
+    <article class="detail-mainarticle">
+        <article  class="detail-seVeEnTablet">
+
+            <div class="detail-itemImg">
+                <div class="detail-imgConteinerTabletCentrar"><img src="/img/products/<%= product.imagen %>"></div>
+                <div class="detail-compartir">
+                    <h4>Compartir</h4>
+                    <div><i class="far fa-envelope"></i></div>
+                    <div><i class="fab fa-facebook-f"></i></div>
+                    <div><i class="fab fa-twitter"></i></div>
+                    <div><i class="fab fa-pinterest-p"></i></div>
+                </div>
+            </div>
+
+            <div class="detail-itemTools">
+                <div class="detail-estrellasydatos"><img class="detail-estrellas" src="/img/cuatro-estrellas.png">
+                    <p class="detail-p">Formato papel, Español / Stephen King</p>
+                </div>
+                <div class="detail-precioTablet">
+                    <h2 class="detail-h2">ARS$<%= toThousand(product.precio) %></h2>
+                </div>
+                <div class="detail-contenedorEnvio">
+                    <div class="detail-envio">
+                        <div class="detail-cohete"><i class="fas fa-rocket"></i></div>
+                        <h4 class="detail-texto">Envío gratis</h4>
+                    </div>
+                    <div class="detail-disponible">
+                        <i class="far fa-clock"></i>
+                        <p>Disponible. Entrega estimada a Argentina entre 17-32 días hábiles.</p>
+                    </div>
+                </div>
+                <!-- BOTON TABLET -->
+                <div class="detail-boton" id="btn-agregar-tablet">
+                    <h5>Añadir al carrito</h5>
+                </div>
+                <% if (user && user.categorias_id === 3) { %>
+                <form action="/products/delete/<%= product.id %>?_method=DELETE" method="POST">
+                    <button type="submit" class="detail-boton" id="deleteProduct-tablet" >
+                        <h5>Eliminar producto</h5>
+                    </button>
+                </form>
+                <form action="/products/edit/<%= product.id %>" method="GET">
+                    <button  type="submit" class="detail-boton"><p>Editar producto</p></a></button>
+                </form>
+                <% } %>
+            </div>
+        </article>
+        </article>
+        <article class="detail-mainarticle">
+        <article  class="detail-seveEnCompu">
+            <div class="detail-contenedorCompu">
+                <div class="detail-itemImg"><img id="imagen" src="/img/products/<%= product.imagen %>"></div>
+                <div class="detail-item-info">
+                    <div class="detail-tituloCompu">
+                        <h2 class="detail-h2"  class="detail-miniborde" id="titulo"><%= product.nombre %></h2>
+                    </div>
+                    <div class="detail-estrellasydatos"><img class="detail-estrellas" src="/img/cuatro-estrellas.png">
+                        <p class="detail-p">Formato papel, Español / Stephen King</p>
+                    </div>
+                    <div class="detail-compartir">
+                        <h4>Compartir</h4>
+                        <div><i class="far fa-envelope"></i></div>
+                        <div><i class="fab fa-facebook-f"></i></div>
+                        <div><i class="fab fa-twitter"></i></div>
+                        <div><i class="fab fa-pinterest-p"></i></div>
+                    </div>
+                    <div class="detail-sinopsis">
+                        <p class="detail-p"> <%= product.descripcion %> </p>
+                    </div>
+                </div>
+            </div>
+            <div class="detail-checkoutTools">
+                <div class="detail-precioTablet">
+                    <h2 id="precio" data-precio="<%= product.precio %>" >ARS$ <%= toThousand(product.precio) %></h2>
+                </div>
+                <div class="detail-contenedorEnvio">
+                    <div class="detail-envio">
+                        <div class="detail-cohete"><i class="fas fa-rocket"></i></div>
+                        <h4 class="detail-texto">Envío gratis</h4>
+                    </div>
+                    <div class="detail-disponible">
+                        <i class="far fa-clock"></i>
+                        <p class="detail-p">Disponible. Entrega estimada a Argentina entre 17-32 días hábiles.</p>
+                    </div>
+                    <p class="pcart-texto"  >Cantidad<select name="cantidad" id="cantidad">
+                        <option value="1">1</option>
+                        <option value="2">2</option>
+                        <option value="3">3</option>
+                    </select>
+                </p>
+                </div>
+                <!-- BOTON COMPU -->
+                <button type="submit" class="detail-boton" id="btn-agregar">
+                    <h5>Añadir al carrito</h5>
+                </button>
+                <% if (user && user.categorias_id === 3) { %>
+                <form action="/products/delete/<%= product.id %>?_method=DELETE" method="POST">
+                <button type="submit" class="detail-boton" id="deleteProduct">
+                    <h5>Eliminar producto</h5>
+                </button>
+            </form>
+            <form action="/products/edit/<%= product.id %>" method="GET">
+            <button  type="submit" class="detail-boton"><p>Editar producto</p></a></button>
+        </form>
+        <% } %>
+            </div>
+        </article>
+    </article>
+
+        <article class="detail-mainarticle">
+            <div class="detail-descripcion">
+                <h4 class="detail-miniborde">Descripción</h4>
+                <p class="detail-p"> <%= product.descripcion %>
+            </div>
+        </article>
+        <article class="detail-mainarticle">
+            <div class="detail-detalledelproducto">
+                <div class="detail-miniborde">
+                    <h4>Detalles del producto</h4>
+                </div>
+                <div class="detail-dimensiones">
+                <div class="detail-izquierda">
+                    <div class="detail-alinear">
+                        <h5>Formato:</h5>
+                        <p class="detail-p">Book / 245 páginas</p>
+                    </div>
+                    <div class="detail-alinear">
+                        <h5>Dimensiones:</h5>
+                        <p class="detail-p"> 160 x 240mm / 452g</p>
+                    </div>
+                    <div class="detail-alinear">
+                        <h5>Fecha de publicación:</h5>
+                        <p class="detail-p">01 Jun 2021</p>
+                    </div>
+                    <div class="detail-alinear">
+                        <h5>Dimensiones:</h5>
+                        <p class="detail-p">160 x 240mm / 452g</p>
+                    </div>
+                    <div class="detail-alinear">
+                        <h5>Editorial:</h5>
+                        <p class="detail-p">Plaza & Janés</p>
+                    </div>
+                </div>
+                <div class="detail-derecha">
+                    <div class="detail-alinear">
+                        <h5>Ciudad/País de publicación:</h5>
+                        <p class="detail-p">España</p>
+                    </div>
+                    <div class="detail-alinear">
+                        <h5>Idioma:</h5>
+                        <p class="detail-p" >Español</p>
+                    </div>
+                    <div class="detail-alinear">
+                        <h5>ISBN13:</h5>
+                        <p class="detail-p">9788401027123</p>
+                    </div>
+                    <div class="detail-alinear">
+                        <h5>Ranking en los libros más vendidos:</h5>
+                        <p class="detail-p">164.333</p>
+                    </div>
+                </div>
+            </div>
+        </article>
+
+        
+      <article class="detail-mainarticle">
+            <div class="detail-productobuscado">
+                <div class="detail-miniborde">
+                    <h4>Los clientes que compraron este producto también compraron</h4>
+                </div>
+                <div class="detail-compraron-compu">
+                    <% for(let i=0; i < products.length ; i++) { %>
+                    <div class="detail-columna detail-as">
+                        <img class="detail-sangremanda" src="/img/products/<%= products[i].imagen %> ">
+                        <a href="/products/detail/<%= products[i].id %>" ><h5><%= products[i].nombre %></h5></a>
+                        <p class="detail-p">Stephen King</p>    
+                        <img class="detail-estrellas" src="/img/cuatro-estrellas.png">
+                        <h2 class="detail-h2" class="detail-precios">$<%= toThousand(products[i].precio) %></h2>
+                        <p class="detail-p" class="detail-botones">Añadir al carrito</p>    
+                    </div>
+                    <% } %>
+                </div>
+                <div class="detail-compraron-tablet">
+                    <% for(let i=0; i < productsTablet.length ; i++) { %>
+                    <div class="detail-columna detail-as">
+                        <img class="detail-sangremanda" src="/img/products/<%= productsTablet[i].imagen %> ">
+                        <a href="/products/detail/<%= productsTablet[i].id %>" ><h5><%= productsTablet[i].nombre %></h5></a>
+                        <p class="detail-p">Stephen King</p>    
+                        <img class="detail-estrellas" src="/img/cuatro-estrellas.png">
+                        <h2 class="detail-h2" class="detail-precios">$<%= toThousand(productsTablet[i].precio) %></h2>
+                        <p class="detail-p" class="detail-botones">Añadir al carrito</p>    
+                    </div>
+                    <% } %>
+                </div>
+                <div class="detail-compraron-celular">
+                    <% for(let i=0; i < productsCelular.length ; i++) { %>
+                    <div class="detail-columna detail-as">
+                        <img class="detail-sangremanda" src="/img/products/<%= productsCelular[i].imagen %> ">
+                        <a href="/products/detail/<%= productsCelular[i].id %>" ><h5><%= productsCelular[i].nombre %></h5></a>
+                        <p class="detail-p">Stephen King</p>    
+                        <img class="detail-estrellas" src="/img/cuatro-estrellas.png">
+                        <h2 class="detail-h2" class="detail-precios">$<%= toThousand(productsCelular[i].precio) %></h2>
+                        <p class="detail-p" class="detail-botones">Añadir al carrito</p>    
+                    </div>
+                    <% } %>
+                </div>
+            </div>
+        </article> 
+    </main>
+   <%- include("./partials/footer") %>
+   <script src="/js/btnEliminar.js"></script>
+   <script src="/js/agregar.js"></script>
+   <script src="/js/agregarCelu.js"></script>
+   <script src="/js/agregarTablet.js"></script>
+   <script src="/js/btnEliminarTablet.js"></script>
+   <script src="/js/btnEliminarCelu.js"></script>
+</body>
+
+</html>

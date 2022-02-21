@@ -1,0 +1,248 @@
+*{
+    margin: 0px;
+    padding: 0px;
+    font-family: 'Roboto', sans-serif;
+}
+
+/*REGISTRO*/
+
+.reg-main-div{
+    display: flex;
+    flex-direction: column;
+    align-items:center;
+    margin: 20px 0 ;
+}
+.reg-div-nuestra-web{
+    background-color: #262120;
+    display: flex;
+    flex-direction: column;
+    align-items:center;
+    flex-grow: 0.5;
+    text-align: center;
+    color:white;
+    width: 80%;
+    padding: 2%;
+}
+.reg-inputs{
+    font-family: 'Gemunu Libre',sans-serif;
+    font-size: 17px;
+    margin: 4% 0;
+    width: 85%;
+    height: 24px;
+    text-align: center;
+}
+.reg-botones-nuestra-web{
+    background-color: #8C1B1B;
+    padding: 8px;
+    border-radius: 8px;
+    margin: 10px;
+    width: 55%;
+    color: white;
+    font-size: 15px;
+}
+.reg-boton-ingresar{
+    background-color:#8C1B1B;
+    padding: 8px;
+    border-radius: 8px;
+    margin: 10px;
+    width: 15%;
+}
+.reg-boton-ingresar a{
+    color: white;
+    text-decoration: none;
+    font-size: 18px;
+}
+.reg-text{
+    padding: 10px;
+    font-size: 18px;
+}
+.reg-con{
+    background-color: #8C1B1B;
+    display: flex;
+    flex-direction: column;
+    align-items:center;
+    text-align: center;
+    color:white;
+    width: 80%;
+    padding: 8% 2%;
+}
+.reg-con-boton{
+    font-weight: bolder;
+    background-color: white;
+    font-size: 1.2rem;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    align-items: center;
+    margin: 4% 0;
+    min-width: 60%;
+    border: none;
+    height: 35px;
+}
+.reg-google{
+    height: 20px;
+    margin: 0;
+}
+.reg-fa-facebook-f, .reg-fa-facebook-f i{
+    color:#1877F2 ;
+}
+.reg-twitter , .reg-twitter i{
+    color: rgb(29, 155, 240);
+}
+.reg-linkedIn , .reg-linkedIn i{
+    color:#0a66c2;
+}
+.reg-tienes-cuenta{
+    text-align: center;
+    margin-bottom: 5%;
+    background-color: #d9d9d9;
+}
+.reg-categoria{
+    font-size: 14px;
+    font-family: 'Gemunu Libre',sans-serif;
+    text-align: center;
+    margin: 4% 0;
+    height: 24px;
+    padding-left: 15px;
+    width: 85%;
+}
+input[type="file"]{
+    display:none
+}
+label[for="image"]{
+    display: inline-block;
+    padding: 6px;
+    background-color: #d9d9d9;
+    cursor: pointer;
+    font-size: 14px;
+    color: black;
+    border-radius: 5px;
+    max-width: 55%;
+    text-align: center;
+    font-family: 'Gemunu Libre',sans-serif;
+}
+/*MEDIA QUERIES*/
+/*MOVIL*/
+@media (min-width:320px){
+    /*MAIN*/
+    .reg-tienes-cuenta{
+        margin: -20px 10% 0 10%;
+    }
+    .reg-boton-ingresar{
+        width: 35%;
+    }
+}
+/*TABLET*/
+@media (min-width:481px){
+    /*MAIN*/
+    .reg-main-div{
+        flex-direction: row;
+        margin:5% 5% 0;
+        box-shadow: #686868 5px 5px 5px;
+    }
+    .reg-div-nuestra-web{
+        height: 350px;
+    }
+    .reg-form{
+        margin-top: 30px;
+    }
+    .reg-inputs{
+        width: 70%;
+        height: 20px;
+    }
+    .reg-con{
+        align-self: stretch;
+        padding:  2%;
+    }
+    .reg-con h2{
+        padding-bottom: 10%;
+    }
+    .reg-tienes-cuenta{
+        margin: 0px 5% 0 5%;
+        box-shadow: #686868 5px 5px 5px;
+    }
+    .reg-boton-ingresar{
+        width: 20%;
+    }
+    label[for="image"]{
+        width: 200px;
+    }
+    .reg-categoria{
+        font-size: 10px;
+        width: 69%;
+        text-align: center;
+    }
+}
+    /*LAPTOP*/
+@media (min-width:769px){
+     
+    /*MAIN*/
+    .reg-main-div{
+        margin: 5% 15% 0;
+    }
+    .reg-form{
+        width: 70%;
+        margin-top: 10px;
+    }
+    .reg-div-nuestra-web {
+        height: 9%;
+    }
+    .reg-inputs{
+        font-family: 'Gemunu Libre',sans-serif;
+        font-size: 18px;
+        height: 22px;
+        margin: 4% 0;
+        max-width: 70%;
+    }
+    .reg-botones-nuestra-web{
+        width: 50%;
+    }
+    .reg-botones-nuestra-web:hover {
+        background-color: rgba(140, 27, 27, 0.8);
+    }
+    .reg-boton-ingresar:hover{
+        background-color: rgba(140, 27, 27, 0.8);
+    }
+    .reg-con-boton{
+        margin: 3% 0;
+    }
+    .reg-con-boton:hover .fa-facebook-f{
+        background-color: #1877F2;
+        color: white;
+    }
+    .reg-fa-facebook-f:hover{
+        background-color: #1877F2;
+        color: white;
+    }
+    .reg-con-boton:hover .fa-twitter{
+        background-color: rgb(29, 155, 240);
+        color: white;
+    }
+    .reg-twitter:hover{
+        background-color: rgb(29, 155, 240);
+        color: white;
+    }
+    .reg-con-boton-google:hover{
+        background-color: rgb(29, 155, 240);
+        color: white;
+    }
+    .reg-con-boton:hover .fa-linkedin-in{
+        background-color: #0a66c2;
+        color: white;
+    }
+    .reg-linkedIn:hover{
+        background-color: #0a66c2;
+        color: white;
+    }
+    .reg-tienes-cuenta{
+        margin: 0 15%;
+    }
+    .reg-categoria{
+        width: 68%;
+        font-size: 16px;
+        height: 25px;
+    }
+    label[for="image"]{
+        font-size: 17px;
+    }
+}

@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <%- include("./partials/head", {title : "Suspenso - SK Libros"}) %>
+
+</head>
+<body>
+    <%- include("./partials/header") %>
+    <main>
+        <div class="index-titulo-productos">
+            <h3>
+                <a href="">Suspenso</a>
+            </h3>
+        </div>
+        <section class="index-caja-productos">
+            <% for(let i=0; i < products.length ; i++) { %>
+                <div class="index-producto">
+                    <div class="index-img-productos">
+                        <div class="index-msj-producto">
+                            <p class="index-parrafo-nuevo">Nuevo!</p>
+                        </div>
+                        <a href="/products/detail/<%= products[i].id %>" class="index-link-descripciones">
+                            <img src="/img/products/<%= products[i].imagen %>" alt=""> 
+                        </a>
+                    </div>
+                    <div class="index-caja-descripcion">
+                        <a href="/products/detail/<%= products[i].id %>" class="index-link-descripciones">
+                            <p class="index-descripciones"><b><%= products[i].nombre %></b></p>
+                        </a>
+                        <div class="index-contenedor-detalles">
+                            <p class="index-precios">$<%= toThousand(products[i].precio) %></p>
+                            <p class="index-descuentos"><%= products[i].descuento %>%</p>
+                        </div>
+                        <button type="" class="index-agregar-carrito">Agregar al carrito</button>
+                    </div>
+                </div>
+               <% } %>
+            </section>
+    </main>
+    <%- include("./partials/footer") %>
+</body>
+</html>

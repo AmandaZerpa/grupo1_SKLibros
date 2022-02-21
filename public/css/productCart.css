@@ -1,0 +1,311 @@
+*{
+    font-family: Roboto;
+    margin: 0px;
+    padding: 0px;
+}
+
+/*main*/
+
+body{
+    background-color: white;
+}
+main{
+    opacity: 0.9;
+}
+.pcart-titulo{
+    font-size: 24px;
+    font-family: gemunu libre;
+    width: 85%;
+    padding-top: 10px;
+    padding-bottom: 10px;
+    padding-left: 7%;
+}
+
+.pcart-boton-de-pago{
+    text-align: center;
+    width: 120px;
+    background-color:#8C1B1B;
+    color: white;
+    border-radius:5px;
+    padding: 5px;
+}
+.pcart-subtítulo{
+    padding: 15px;
+    border: solid #8C1B1B 1px;
+    background-color: white;
+    font-family:gemunu libre;
+}
+.pcart-message{
+    width: 100%;
+}
+.pcart-primeros-parrafos{
+    box-shadow: 0px 0px 10px rgb(100 100 100);
+    margin: 5px;
+}
+.pcart-conteinerTodo{
+    box-shadow: 0px 0px 10px rgb(100 100 100);
+    margin: 5px;
+}
+.pcart-terminos{
+    padding: 15px;
+    border: solid #8C1B1B 1px;
+    background-color: white;
+    text-align: center;
+}
+.pcart-inicio{
+    display: flex;
+    padding: 15px;
+    border: solid #8C1B1B 1px;
+    background-color: white;
+}
+.pcart-descripcion{
+    display: block;
+}
+.pcart-texto{
+    font-size: 12px;
+}
+.pcart-cantidad{
+    width:30px;
+    text-align: center;
+}
+.pcart-imagenes{
+    display: contents;
+}
+.pcart-nombre-libro{
+    font-size: 17px;
+    font-family:gemunu libre;
+}
+.pcart-estrellas{
+    color:#eac926;
+    font-size: 8px;
+    padding-top: 5px;
+}
+.pcart-cupon{
+    font-size: 12px;
+    font-family: 'Roboto';
+}
+.pcart-boton-cantidad{
+    width: 20px;
+    border-radius: 3px;
+}
+.pcart-precio{
+    font-size: 12px;
+}
+.pcart-conteinerDesc{
+    display: flex;
+    margin-bottom: 20px;
+    justify-content: space-between;
+}
+.pcart-libro {
+    display: flex;
+    padding: 15px;
+    border: solid #8C1B1B 1px;
+    background-color: white;
+    padding-bottom: 10px;
+    justify-content: space-between;
+    flex-direction: column;
+}
+
+.pcart-foto{
+    width: 77px;
+    margin-right: 10px;
+    box-shadow: 0px 0px 10px rgb(100 100 100);
+    
+}
+.pcart-parte-derecha-descripcion{
+    text-align: center;
+    line-height: 2;
+    justify-content: center;
+    flex-direction: column;
+}
+.pcart-boton-eliminar{
+    padding: 5px;
+    text-align: center;
+    color: white;
+    background-color: #8C1B1B;
+    border-radius: 5px;
+    width: 30px;
+}
+.pcart-vaciar-carrito{
+    text-align: center;
+    background-color:#8C1B1B;
+    color: white;
+    border-radius:5px;
+    padding: 5px;
+    display: block;
+    margin-left: auto;
+    margin-right: 18px;
+    margin-top: 10px;
+    margin-bottom: 10px;
+}
+
+.pcart-formas-de-pago{
+    display: flex;
+    padding: 15px;
+    border: solid #8C1B1B 1px;
+    background-color: white;
+    padding-bottom: 10px;
+    justify-content: space-between;
+}
+.pcart-detalle-de-pago{
+    border: solid #8C1B1B 1px;
+    background-color: white;
+    display: flex;
+    padding: 15px;
+    padding-bottom:10px;
+    line-height: 1.5;
+}
+.pcart-info{
+    margin-left: auto;
+}
+
+.pcart-boton-seguir-comprando{
+    display: block;
+    margin:auto;
+    padding: 5px;
+    background-color: #8C1B1B;
+    color: white;
+    width: 150px;
+    border-radius: 5px;
+}
+.pcart-boton-aplicar{
+    background-color: #8C1B1B;
+    border-radius: 5px;
+    color:white;
+    padding: 5px;
+}
+.pcart-agregar-cupon{
+    width: 65%;
+}
+.pcart-total{
+    display: flex;
+    justify-content: space-between;
+}
+.pcart-envío{
+    display: flex;
+    justify-content: space-between;   
+}
+.fab{
+    font-size: 20px;
+    color:#262120;
+}
+.pcart-h5{
+    font-size: 16px;
+}
+.pcart-gastos{
+    font-size: 16px;
+}
+.pcart-añadirCupon{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+.pcart-aplicar{
+    display: flex;
+    justify-content: space-evenly;
+}
+.pcart-pago{
+    background-color: #8C1B1B;
+    width: 110px;
+    border-radius: 5px;
+}
+
+
+
+/*TABLET*/
+@media (min-width:481px){
+
+    
+    /*MAIN*/
+    .pcart-primeros-parrafos{
+        margin: 30px;
+    }
+    .pcart-conteinerTodo{
+        margin: 30px;
+    }
+    .pcart-estrellas{
+        font-size: 10px;
+        padding-top: 15px;
+    }
+   
+    .pcart-libro{
+        border-top: none;
+    }
+    
+    .pcart-gastos{
+        padding-right: 200px;
+    }
+    .pcart-formas-de-pago{
+      border-top: none;
+    }
+    .pcart-parte-derecha-descripcion{
+        display: flex;
+        align-items: center;
+    }
+    .pcart-precio{
+        font-size: 17px;
+    }  
+}
+
+
+@media (min-width:769px){
+
+ /*MAIN*/
+    /*PRODUCTOS*/
+    .pcart-titulo{
+        font-size: 40px;
+    }
+    .pcart-texto{
+        font-size: 20px;
+        
+    }
+.pcart-precio{
+    font-size: 20px;
+}
+
+    .pcart-nombre-libro{
+        font-size: 35px;
+    }
+    .pcart-foto{
+        width: 120px;
+    }
+    .pcart-precio{
+        font-size: 20px;
+        margin-top: 20px;
+    }
+
+    .pcart-estrellas{
+        color:#eac926;
+        font-size: 20px;
+        padding-top: 15px;
+    }
+    
+    .pcart-seguir-comprando{
+        width: 160px;
+        height: 30px;
+        text-align: center;
+    }
+    .pcart-pago{
+        width: 130px;
+        height: 30px;
+        text-align: center;
+    }
+    .pcart-boton-aplicar{
+        text-align: center;
+    }
+    
+    .pcart-detalle-de-pago{
+        line-height: 2;
+        }
+}
+
+/* LAPTO */
+@media (min-width:1024px){
+    .pcart-gastos{
+        font-size: 18px;
+    }
+    .pcart-h5{
+        font-size: 18px;
+    }
+    
+}

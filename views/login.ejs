@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <%- include("./partials/head", {title : "Iniciar Sesión"}) %>
+</head>
+<body>
+    <%- include("./partials/header") %>
+    <main class="log-main">
+        <div class="log-contenedor">
+            <form action="/users/login" id="log-form" method='POST'>
+                <h2 class="log-titulo-principal">Inicia sesión</h2>
+                <div class="log-control-formulario">
+                    <input type="text" name="email" id="log-email" placeholder="Correo electrónico" class="log-control">
+                    <div class="errorEmail"></div>
+                    <% if(locals.errors && errors.email)  { %>
+                        <div class="log-errores">
+                            <%= errors.email.msg %> 
+                        </div> 
+                        <% } %>    
+                </div>
+                <div class="log-control-formulario">
+                    <input type="password" name="contrasenia" id="password-Log" placeholder="Contraseña" class="log-control">
+                    <div class="erPassword"></div>
+                    <% if(locals.errors && errors.contrasenia)  { %>
+                        <div class="log-errores">
+                            <%= errors.contrasenia.msg %> 
+                        </div> 
+                        <% } %>
+                </div>
+                
+                <div class="log-checkbox">
+                    
+                        <input type="checkbox" name="Recuerdame" >
+                        <label for= "Recuerdame" class="log-label">Recordarme en este equipo</label> 
+                    
+                </div>
+
+                <div class="log-div-boton">
+                    <button type="submit" id="btnSubmit" class="log-boton-formulario">Ingresar
+                    </button> 
+                </div>
+                
+                <p class="log-p">Olvidé mi contraseña</p>
+
+                <p class="log-text-regist">No tienes una cuenta?</p>
+                
+                <div class="log-div-boton"> 
+                    <button type="submit"  class="log-boton-formulario">
+                        <a href="/users/register">Regístrate</a>
+                    </button>
+                </div>
+                
+            </form>
+
+        </div>
+    </main>
+    <%- include("./partials/footer") %>
+    <script src="/js/usersLoginFront.js"></script>
+</body>
+</html>

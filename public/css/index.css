@@ -1,0 +1,234 @@
+*{
+    margin: 0px;
+    padding: 0px;
+    font-family: 'Roboto', sans-serif;
+}
+/*MAIN*/
+/*CARRUSEL*/
+.index-slider {
+    width: 100%;
+    margin: auto;
+    overflow: hidden;
+}
+.index-slider ul {
+    display: flex;
+    padding: 0;
+    width: 400%;
+    animation: cambio 20s infinite alternate linear;
+}
+.index-slider li {
+    width:100%;
+    list-style: none;
+}
+.index-slider img {
+    width: 100%;
+}
+@keyframes cambio{
+    0% {margin-left: 0;}
+    20% {margin-left: 0;}
+
+    25%{margin-left: -100%;}
+    45%{margin-left: -100%;}
+
+    50%{margin-left: -200%;}
+    70%{margin-left: -200%;}
+
+    75%{margin-left: -300%;}
+    100%{margin-left: -300%;}
+}
+/*PRODUCTOS*/
+.index-titulo-productos{
+    background-color:#262120;
+    margin:30px 0 20px 0;
+    height: 35px;
+    padding: 10px;
+    line-height: 010px;
+}
+.index-titulo-productos h3 a{
+    text-decoration:none;
+    color:#D9D9D9;
+    padding-left:20px;
+    font-family:'Gemunu Libre', sans-serif;
+}
+.index-producto{
+    margin: 10px 30px;
+    border-radius: 5px;
+}
+.index-button-ver-mas{
+    display: none;
+}
+.fa-plus{
+    color: #8C1B1B;
+    font-weight: bolder;
+    font-size: 30px;
+}
+.fa-plus:hover{
+    color: #BF8A26;
+}
+.index-msj-producto{
+    background-color: #8C1B1B;
+    color:white;
+    position: relative;
+    width: 25%;
+    padding: 10px;
+    text-align: center;
+    visibility: hidden;
+}
+.index-img-productos img{
+    width:80%;
+    background-color:white;
+    margin:5px 30px;
+}
+.index-link-descripciones{
+    text-decoration: none;
+}
+.index-caja-descripcion{
+    text-align:center;
+}
+.index-precios{
+    font-size:18px;
+}
+.index-descuentos{
+    font-size: 14px;
+    color:green;
+    margin-left: 2%;
+}
+.index-decripciones{
+    font-size:16px;
+}
+.index-main a{
+    color: black;
+    text-decoration: none;
+}
+.index-main a:hover{
+    color:#8C1B1B;
+    text-decoration:none;
+}
+.index-agregar-carrito{
+    color:white;
+    background-color:#8C1B1B;
+    padding:10px;
+    margin:10px;
+    border-radius:5px;
+}
+.index-anuncio{
+    background-color: white;
+    width: 50%;
+    height: 100%;
+    margin-left: 20%;
+}
+.index-img-anuncio{
+    width: 120%;
+    margin: 30px 10px;
+}
+
+/*MEDIA QUERIES*/
+/*MOVIL*/
+@media(min-width:320px){
+    /*MAIN*/
+    /*PRODUCTOS*/
+    .index-producto{
+        box-shadow: 0px 0px 10px rgb(100 100 100);
+    }
+    .index-msj-producto{
+        box-shadow: 0px 0px 10px rgb(100 100 100);
+        visibility: visible;
+    }
+    .index-descripciones{
+        display: none;
+    }
+    .index-agregar-carrito{
+        display: none;
+    }
+    .index-contenedor-detalles{
+        display: flex;
+        justify-content: space-around;
+        align-items: center;
+    }
+    .index-precios{
+        font-size: 30px;
+    }
+    .index-descuentos{
+        font-size: 18px;
+        color: green;
+        margin-left: 2%;
+    }
+}
+/*TABLET*/
+@media (min-width:481px){
+    /*MAIN*/
+    /*PRODUCTOS*/
+    .index-caja-productos{
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: space-evenly;
+    }
+    .index-producto{
+        width: 40%;
+        margin: 10px 30px;
+        border-radius: 5px;
+    }
+    .index-img-productos img{
+        margin: 10%;
+    }
+    .index-msj-producto{
+        background-color: #8C1B1B;
+        color: white;
+        position: absolute;
+        width: 10%;
+        height: 5%;
+        padding: 10px;
+        text-align: center;
+    }
+}
+
+/*LAPTOP*/
+@media (min-width:769px){
+
+    /*MAIN*/
+    /*PRODUCTOS*/
+    .index-titulo-productos h3 a{
+        font-size: 24px;
+        padding-left: 6%;
+    }
+    .index-producto{
+        width: 18%;
+        height: 18%;
+        box-shadow: 0px 0px 0px;
+    }
+    .index-msj-producto{
+        visibility: hidden;
+    }
+    .index-producto:hover .index-msj-producto{
+        visibility: visible;
+        box-shadow: 0px 0px 10px rgb(100 100 100);
+        transition: all 400ms;
+        padding: 5px;
+        height: 4%;
+    }
+    .index-producto:hover{
+        box-shadow: 0px 0px 10px rgb(100 100 100);
+        transition: all 400ms;
+    }
+    .index-parrafo-nuevo{
+        font-size: 14px;
+    }
+    .index-precios{
+        font-size: 20px;
+    }
+    .index-descripciones{
+        color: black;
+        display: flex;
+        font-size: 20px;
+        padding: 10px;
+        justify-content: center;
+    }
+    .index-button-ver-mas{
+        display: flex;
+        height: 100px;
+        margin-top: 10%;
+        border: none;
+        background-color: transparent;
+        margin-right: 15px;
+    }
+}

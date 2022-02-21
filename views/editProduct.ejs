@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <%- include("./partials/head", {title : productToEdit.nombre + " - SK Libros"}) %>
+    </head>
+    <body>
+        <%- include("./partials/header") %>
+        <main>
+            <form class="editp-formCreate" action="/products/edit/<%=productToEdit.id%>?_method=PATCH" id="editp-form" method="POST" enctype="multipart/form-data"> 
+                <h2 class="editp-tituloCreate">Editando el producto: <%= productToEdit.nombre%> </h2>
+                <div class="editp-main-div">
+                    <ul class="editp-ul">
+                        <li class="editp-label">
+                            <label for="name">Nombre</label>
+                        </li>
+                        <li>
+                            <input class="editp-input" type="text" name="name" id="editp-nombre" placeholder= "<%=productToEdit.nombre%>" value="<%=locals.oldData ? oldData.nombre : null %>">
+                            <div class="errorNombre"></div>
+                            <% if(locals.errors && errors.name){%>
+                                <div class="errorNombre">
+                                    <small class="small-errores">    
+                                        <%= errors.name.msg%>
+                                    </small> 
+                                </div>  
+                            <% } %> 
+                            
+                        </li>
+                        <li class="editp-label">
+                            <label for="description">Descripción</label>
+                        </li>
+                        <li>
+                            <textarea class="editp-input" name="description" id="editp-descripcion" placeholder="<%=productToEdit.descripcion%>" value="<%=locals.oldData ? oldData.description : null %>"></textarea>
+                            <div class="errorDescripcion"></div>
+                            <% if(locals.errors && errors.description){%>
+                                <div>
+                                <%= errors.description.msg%> 
+                                </div>  
+                            <% } %>     
+                        </li>
+                        <li class="editp-label editp-cambiar-imagen">
+                            <label for="imageCrEdit">Cambiar Imagen</label>
+                            <div class="errorImage"></div>
+                            <input class="cr-fotoCreate" type="file" name="image" id="imageCrEdit" value="<%=locals.oldData ? oldData.image : null %>">
+                            <% if(locals.errors && errors.image){%>
+                                <div class="errorImage">
+                                    <small class=" small-error-imagen">
+                                        <%= errors.image.msg%>
+                                    </small> 
+                                </div>  
+                            <% } %> 
+                        </li>
+                        <li class="editp-label label-genre">
+                            <label for="genre">Género</label>
+                        </li>
+                        <li>
+                            <select class="editp-input label-genre" name="genre" id="editp-genre" >
+                                <option value="3">Suspenso</option>
+                                <option value="2">Terror</option>
+                                <option value="1">Fantasía</option>   
+                            </select>
+                            
+                        </li>
+                        <li class="editp-label">
+                            <label for="price">Precio</label>
+                        </li>
+                        <li>
+                            <input class="editp-input" type="text" name="price" id="editp-precio"placeholder="$<%=productToEdit.precio%>" value="<%=locals.oldData ? oldData.price : null %>">
+                            <div class="errorPrecio"></div>
+                            <% if(locals.errors && errors.price){%>
+                                <div>
+                                <%= errors.price.msg%> 
+                                </div>  
+                            <% } %> 
+                        </li>
+                        <li class="editp-label">
+                            <label for="discount">Descuento</label>
+                        </li>
+                        <li>
+                            <input class="editp-input" type="text" name="discount" id="editp-descuento" placeholder="<%=productToEdit.descuento%>" value="<%=locals.oldData ? oldData.discount : null %>">
+                            <div class="errorDescuento"></div>
+                            <% if(locals.errors && errors.discount){%>
+                                <div>
+                                <%= errors.discount.msg%> 
+                                </div>  
+                            <% } %> 
+                    </ul>    
+                </div>
+                <div >
+                    <button class="editp-botónCreate" type="submit">Editar</button>
+                </div>
+            </form>
+        </main>
+        <%- include("./partials/footer") %>
+        <script src="/js/productEditFront.js"></script>
+    </body>
+</html>

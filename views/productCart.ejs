@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <%- include("./partials/head", {title : "Carrito de Compras - SK Libros"}) %>
+</head>
+
+<body>
+    <%- include("./partials/header") %>
+    <main>
+        <h1 class="pcart-titulo">Tu cesta</h1>
+        <div class="pcart-primeros-parrafos">
+            <!-- <div class="pcart-inicio">
+                <p class="pcart-message"><i class="fas fa-gift"></i> Tienes 3 articulos con un totoal de $$$ en tu cesta</p>
+                <div>
+                    <button class="pcart-boton-de-pago">Proceder al Pago</button>
+                </div>
+            </div> -->
+
+            <p class="pcart-terminos">
+                Al realizar tu pedido confirmas que has leido y aceptas nuetros Terminos y condiciones. Consulta también
+                nuestra politica de privacidad y nuestras cookies.
+            </p>
+        </div>
+
+        <div class="pcart-conteinerTodo">
+            <section class="pcart-detalle-carrito-compras">
+                <h3 class="pcart-subtítulo">Detalle de su cesta</h3>
+              <article class="pcart-libro" id="vacio"></article> 
+
+            </section>
+            
+            <button class="pcart-vaciar-carrito"id="cart-botonBorrar" type="button" onclick="">Vaciar Carrito</button>
+        
+            <article class="pcart-detalle-de-pago">
+                <div class="pcart-info">
+                    <div class="pcart-envío">
+                        <h5 class="pcart-gastos">Gastos de envío</h5>
+                        <h5 class="pcart-h5">GRATIS</h5>
+                    </div>
+                    <div class="pcart-total">
+                        <h5 class="pcart-h5">TOTAL</h5>
+                        <h5 class="pcart-h5" id="precioTotal">ARS$ </h5>
+                    </div>
+                    <div class="pcart-añadirCupon">
+                        <h5 class="pcart-h5">Añadir cupón:</h5>
+                    <div class="pcart-aplicar">
+                        <input type="text" class="pcart-agregar-cupon">
+                        <button class="pcart-boton-aplicar">Aplicar</button>
+                    </div>
+                </div>
+            </article>
+            
+            <div class="pcart-formas-de-pago">
+                <i class="fab fa-cc-visa"></i>
+                <i class="fab fa-cc-mastercard"></i>
+                <i class="fab fa-paypal"></i>
+                <i class="fab fa-cc-amex"></i>
+                <button class="pcart-boton-de-pago">Proceder al Pago</button>
+            </div>
+        </div>
+
+        <button class="pcart-boton-seguir-comprando">Seguir comprando</button>
+
+
+    </main>
+
+    <%- include("./partials/footer") %>
+    <script  src="/js/carrito.js"></script>
+
+</body>
+
+</html>
