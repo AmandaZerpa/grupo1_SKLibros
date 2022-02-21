@@ -1,42 +1,30 @@
-# Movies App
-Esta es una app de prueba para mostrar en vide de deploy en heroku.
+﻿# grupo_1_SKLibros
 
-Para poder hacerlo funcional deben clonar el repo y dentro de la carpeta hacer:
+Tem�tica del Market Place: Venta delibros de fantas�a, terror, misterio, específicamente del autor Stephen King.
 
-```
-npm install 
+Nuestra Audiencia:Fanáticos de Stephen King y de los géneros que escribe.
 
-cp .env.example .env
-```
+Integrantes del Grupo:
+*Clara Guastavino: Tengo 18 años, estudio de programacion web y recursos humanos. Me gusta leer y que las cosas me salgan bien.
+*Amanda Zerpa: Venezolana de 19 a�os, m�sico de orquesta, estudiando para ser desarrolladora web.
+*Leandro Larrama:De Colonia del Sacramento, tengo 29 años. Estudie administracion y actualmente programacion, me gusta hacer muebles en hierro y reciclar cosa antiguas.
+*Sof�a Maltoni:
 
-Configurar el .env con los datos de su base de datos
+Sitios de referencia para el proyecto: 
+.Por producto : https://grupolibros.com.uy/
+.Por cliente : https://www.bookshop.com.uy/ 
+.Por funcionalidad : https://www.bookdepository.com/es/
+.Por estetica :  https://www.agathachristie.com/
 
+Repositorio de GitHub:
+https://github.com/ClaraGuasta/grupo_1_SKLibros
 
-```
-DB_USER=
-DB_PASS=
-DB_NAME=
-DB_PORT=
-```
+Tablero Trello:
+https://trello.com/b/l99TP01u/sprint-2
 
-y poner a andar el proyecto
-
-```
-npm start
-```
-
-Esta app tambien tiene incorporado un dashboard en React (/dashboard), que consulta algunos datos de productos ficticios, en caso de querer hacer modificaciones sobre el dashboard deberan ingresar a la carpeta /src/dashboard y hacer:
-
-```js
-// Instalar los paquetes 
-npm install
-// desarrollo
-npm run serve
-// produccion
-npm run build
-```
-
-una vez compilado deben copiar la carpeta static que genera al  public.
+Invitación Tablero Trello:
+https://trello.com/invite/b/l99TP01u/9588cbea4e261ddc487386cb95f3fd16/sprint-2
 
 
-La base de datos de ejemplo esta en src/database (movies_db.sql)
+
+
